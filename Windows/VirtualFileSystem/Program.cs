@@ -217,7 +217,7 @@ namespace VirtualFileSystem
             }
             else
             {
-                log.Info($"\n{Settings.UserFileSystemRootPath} sync root already registered.");
+                log.Info($"\n\n{Settings.UserFileSystemRootPath} sync root already registered.");
             }
         }
 
@@ -253,7 +253,7 @@ namespace VirtualFileSystem
 
             try
             {
-                await ((EngineWindows)Engine).UninstallCleanupAsync();
+                await Engine?.UninstallCleanupAsync();
             }
             catch (Exception ex)
             {
